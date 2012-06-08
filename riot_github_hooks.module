@@ -18,7 +18,11 @@ function riot_github_hooks_menu() {
 }
 
 function riot_github_hooks_get_post() {
-    $post_parameters = json_decode($_POST['payload']);
-    watchdog('riot_github_hooks', '@post', array('@post' => var_dump($post_parameters)), WATCHDOG_NOTICE);
+    $post_parameters = '"payload" parameter is undefined.';
+    if (isset($_POST['payload'])) {
+      $post_parameters = json_decode($_POST['payload']);
+    }
+    $headers = getallheaders();
+    watchdog('riot_github_hooks', '@headers --- @post ', array('@post' => var_dump($post_parameters),'@headers' => var_dump($headers)), WATCHDOG_NOTICE);
     return t('Use this url to configure Github.');
 }
