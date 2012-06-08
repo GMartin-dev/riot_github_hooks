@@ -7,10 +7,11 @@ function riot_github_hooks_menu() {
   $items = array();
 
   $items['github-hooks'] = array(
-    'title' => 'Automated testing',
-    'description' => 'Configure the automated testing project issue integration.',
+    'title' => 'Github integration',
+    'description' => 'Automated testing Github integration.',
     'page callback' => 'riot_github_hooks_get_post',
     'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
   );
   
   return $items;
