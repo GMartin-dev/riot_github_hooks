@@ -20,6 +20,7 @@ function riot_github_hooks_menu() {
 function riot_github_hooks_get_post() {
     $post_parameters = '"payload" parameter is undefined.';
     $get_parameters = $_GET;
+    $post_parameters = $_POST;
     if (isset($_POST['payload'])) {
       $post_parameters = json_decode($_POST['payload']);
     }
