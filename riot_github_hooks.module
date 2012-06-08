@@ -10,6 +10,7 @@ function riot_github_hooks_menu() {
     'title' => 'Automated testing',
     'description' => 'Configure the automated testing project issue integration.',
     'page callback' => 'riot_github_hooks_get_post',
+    'access arguments' => array('access content'),
   );
   
   return $items;
