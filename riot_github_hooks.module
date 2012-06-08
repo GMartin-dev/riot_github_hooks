@@ -26,8 +26,8 @@ function riot_github_hooks_get_post() {
     }
     $headers = getallheaders();
     watchdog('riot_github_hooks', '@headers --- @post --- @get', array(
-                                                                       '@post' => var_export($post_parameters),
-                                                                       '@headers' => var_export($headers),
-                                                                       '@get' => var_export($get_parameters)), WATCHDOG_NOTICE);
+                                                                       '@post' => var_export($post_parameters, TRUE),
+                                                                       '@headers' => var_export($headers, TRUE),
+                                                                       '@get' => var_export($get_parameters, TRUE)), WATCHDOG_NOTICE);
     return t('Use this url to configure Github.');
 }
