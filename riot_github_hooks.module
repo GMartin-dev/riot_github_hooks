@@ -20,4 +20,5 @@ function riot_github_hooks_menu() {
 function riot_github_hooks_get_post() {
     $post_parameters = $_POST;
     watchdog('tmgmt_microsoft', '@post', array('@post' => print_r($post_parameters)), WATCHDOG_NOTICE);
+    print t('Use this url to configure Github.');
 }
