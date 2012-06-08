@@ -1,0 +1,4 @@
+name = Riot Github hooks
+description = Create a callback to intal Test egrate Github with Drupal Test bots.
+package = Riot
+core = 6.x
